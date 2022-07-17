@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="col-md-3 d-none d-sm-block d-sm-none d-md-block">
+    <div class="sidebar-blog">
+        <div class="news-latest">
+            <div class="sidebarblog-title title_block">
+                <h2>Bài viết mới nhất</h2>
+            </div>
+            <div class="list-news-latest layered">
+                @{
+                    for (int i = 1; i < 5; i++)
+                    {
+                        @Html.Partial(
+                            "~/Views/Blog/Layouts/ArticleSidebar.cshtml",
+                            new ViewDataDictionary { }
+                        )
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

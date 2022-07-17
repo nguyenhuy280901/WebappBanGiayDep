@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<section class="section section-collection">
+    <div class="content">
+        <div class="container">
+            <div class="hot_sp">
+                <h2 style="text-align:center;">
+                    <a style="font-size: 28px;color: black;text-decoration: none" href="">
+                        @ViewData["product_type"]
+                    </a>
+                </h2>
+                <div class="view-all" style="text-align:center;">
+                    <a style="color: black;text-decoration: none" href="">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid product" style="width: 100%;margin: auto;">
+        <div class="owl-carousel owl-theme owl-product-setting">
+            @{
+                for (int i = 1; i < 5; i++)
+                {
+                    <div class="item">
+                        @Html.Partial(
+                            "~/Views/Home/Layouts/Product.cshtml",
+                            new ViewDataDictionary { }
+                        )
+                    </div>
+                }
+            }
+            <!--<div class="owl-nav"></div>-->
+        </div>
+        
+    </div>
+</section>

@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Liên hệ";
+}
+
+<!--Banner-->
+<div>
+    <div>
+        <img src="@Href("~/Images/collection_banner.jpg")" alt="Products">
+    </div>
+</div>
+
+<!-- Breadcrumb -->
+@Html.Partial(
+        "~/Views/Shared/Pages/Breadcrumb.cshtml",
+        new ViewDataDictionary { }
+)
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 box-heading-contact">
+                <div class="box-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.842846725132!2d106.77626585031152!3d10.823335992251872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317526fb8a88790d%3A0x308d79266e849dee!2zxJDGsOG7nW5nIHPhu5EgMTg1LCBQaMaw4bubYyBMb25nIEIsIFF14bqtbiA5LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1657986175355!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12  wrapbox-content-page-contact">
+                <div class="header-page-contact clearfix">
+                    <h1>Liên hệ</h1>
+                </div>
+                <div class="box-info-contact">
+                    <ul class="list-info">
+                        <li>
+                            <p>Địa chỉ chúng tôi</p>
+                            <p>
+                                <strong>
+                                    Số 15 Đường 185, phường Phước Long B, Thành phố Thủ Đức
+                                </strong>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Email chúng tôi</p>
+                            <p><strong><a href="mailto:Doanthikimoanh2016@gmail.com">Doanthikimoanh2016@gmail.com</a></strong></p>
+                        </li>
+                        <li>
+                            <p>Điện thoại</p>
+                            <p><strong><a href="tel:0363397269">(+84) 036 339 7269</a></strong></p>
+                        </li>
+                        <li>
+                            <p>Thời gian làm việc</p>
+                            <p>
+                                <strong>
+                                    - Thứ 2 đến Thứ 6 từ 8h đến 18h
+                                    <br />- Thứ 7 và Chủ nhật từ 9h30 đến 17h00
+                                </strong>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-send-contact">
+                    <h2>Gửi thắc mắc cho chúng tôi</h2>
+                    <div id="col-left contactFormWrapper menuList-links">
+                        <form accept-charset="UTF-8" action="" class="contact-form" method="post">
+                            <div class="contact-form">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12">
+                                        <div class="input-group">
+                                            <input required="" type="text" class="form-control"
+                                                   placeholder="Tên của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="input-group">
+                                            <input required="" type="text" class="form-control"
+                                                   placeholder="Email của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="input-group">
+                                            <input required="" type="text" class="form-control"
+                                                   placeholder="Số điện thoại của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-xs-12">
+                                        <div class="input-group">
+                                            <textarea placeholder="Nội dung"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button class="button dark">Gửi cho chúng tôi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

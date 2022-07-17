@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Sản phẩm";
+}
+
+<!--Banner-->
+<div>
+    <div>
+        <img src="@Href("~/Images/collection_banner.jpg")" alt="Products">
+    </div>
+</div>
+<div class="breadcrumb-shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd5">
+                <ol class="breadcrumb breadcrumb-arrows">
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Product")">
+                            <span>Danh mục</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span><span style="color: #777777">Tất cả sản phẩm</span></span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--List Product-->
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <!-- Sidebar -->
+        @Html.Partial("~/Views/Product/Layouts/Sidebar.cshtml", new ViewDataDictionary() { })
+
+        <!-- Main -->
+        @Html.Partial("~/Views/Product/Layouts/Main.cshtml", new ViewDataDictionary() { })
+    </div>
+</div>

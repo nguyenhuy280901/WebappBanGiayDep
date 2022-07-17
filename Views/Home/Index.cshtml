@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+}
+
+<!-- Owl-Carousel -->
+<div class="owl-carousel owl-theme owl-carousel-setting">
+    <div class="item">
+        <img src="@Href("~/Images/slideshow/slideshow_1.jpg")" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+        <img src="@Href("~/Images/slideshow/slideshow_2.jpg")" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+        <img src="@Href("~/Images/slideshow/slideshow_3.jpg")" class="d-block w-100" alt="...">
+    </div>
+</div>
+
+<!--Content-->
+<div class="content">
+    <!-- List products -->
+    @Html.Partial(
+                "~/Views/Home/Layouts/ListProducts.cshtml",
+                new ViewDataDictionary { { "product_type", "Sản phẩm bán chạy" } }
+     )
+    <!-- End list products -->
+    <!-- Banner category -->
+    <section class="section wrapper-home-banner">
+        <div class="container-fluid" style="padding-bottom: 50px;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 home-banner-pd">
+                    <div class="block-banner-category">
+                        <a href="#" class="link-banner wrap-flex-align flex-column">
+                            <div class="fg-image fade-box">
+                                <img class="lazyloaded" src="@Href("~/Images/category/block_home_category1_grande.jpg")" alt="Shoes">
+                            </div>
+                            <figcaption class="caption_banner site-animation">
+                                <p>Bộ sưu tập</p>
+                                <h2>
+                                    Đại sứ thương hiệu
+                                </h2>
+                            </figcaption>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 home-banner-pd">
+                    <div class="block-banner-category">
+                        <a href="#" class="link-banner wrap-flex-align flex-column">
+                            <div class="fg-image fade-box">
+                                <img class="lazyloaded" src="@Href("~/Images/category/block_home_category2_grande.jpg")" alt="Shoes">
+                            </div>
+                            <figcaption class="caption_banner site-animation">
+                                <p>Bộ sưu tập</p>
+                                <h2>
+                                    Thương hiệu
+                                </h2>
+                            </figcaption>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 home-banner-pd">
+                    <div class="block-banner-category">
+                        <a href="#" class="link-banner wrap-flex-align flex-column">
+                            <div class="fg-image">
+                                <img class="lazyloaded" src="@Href("~/Images/category/block_home_category3_grande.jpg")" alt="Shoes">
+                            </div>
+                            <figcaption class="caption_banner site-animation">
+                                <p></p>
+                                <h2>
+                                    Blog
+                                </h2>
+                            </figcaption>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner category -->
+    <!-- List products carousel -->
+    @Html.Partial(
+                "~/Views/Home/Layouts/ListProductsCarousel.cshtml",
+                new ViewDataDictionary { { "product_type", "Sản phẩm mới" } }
+     )
+    <!-- End list products carousel -->
+    <!-- Blog -->
+    <section class="section section-blog">
+        <!-- Title -->
+        <div class="content">
+            <div class="container">
+                <div class="hot_sp">
+                    <h2 style="text-align:center;padding-top: 10px">
+                        <a style="font-size: 28px;color: black;text-decoration: none" href="">Bài viết mới nhất</a>
+                    </h2>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <!-- Article -->
+        <div>
+            <div class="container">
+                <div class="row">
+                    @for (int i = 1; i < 4; i++)
+                    {
+                        @Html.Partial(
+                            "~/Views/Home/Layouts/Article.cshtml",
+                            new ViewDataDictionary { }
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End blog -->
+    <!-- Register Newletter Form -->
+    <section class="section wrapper-home-newsletter">
+        <div class="container-fluid">
+            <div class="content-newsletter">
+                <h2>Đăng ký</h2>
+                <p>
+                    Đăng ký nhận bản tin của Runner Inn để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt và thông
+                    tin
+                    giảm giá khác.
+                </p>
+                <div class="form-newsletter">
+                    <form action="" accept-charset="UTF-8" class="">
+                        <div class="form-group">
+                            <input type="hidden" id="contact_tags">
+                            <input required="" type="email" value="" placeholder="Nhập email của bạn" aria-label="Email Address"
+                                   class="">
+                            <button type="submit" class=""><span>Gửi</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Register Newletter Form -->
+   
+</div>
